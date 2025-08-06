@@ -23,9 +23,6 @@ jobs:
         mkdir -p $HOME/.kube
         echo "${{ secrets.KUBECONFIG_DATA }}" | base64 -d > $HOME/.kube/config
 
-    - name: Verify cluster access
-      run: kubectl get nodes
-
     - name: Apply Kubernetes Deployment
       run: kubectl apply -f k8s/deployment.yaml
 

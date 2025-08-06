@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: your-dockerhub/node-app:latest
+          image: kpr2/node-app:latest
           ports:
             - containerPort: 5000
